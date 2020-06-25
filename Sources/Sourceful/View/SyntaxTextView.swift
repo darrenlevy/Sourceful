@@ -49,6 +49,15 @@ struct ThemeInfo {
 @IBDesignable
 open class SyntaxTextView: View {
 
+    public var isEditable: Bool {
+        get {
+            return textView.isEditable
+        }
+        set {
+            return textView.isEditable = newValue
+        }
+    }
+
     var previousSelectedRange: NSRange?
 
     private var textViewSelectedRangeObserver: NSKeyValueObservation?
